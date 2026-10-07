@@ -100,7 +100,7 @@ The first time, Colab takes a few seconds to **connect** to a cloud computer (yo
 1. In Colab choose **File → Open notebook**.
 2. Click the **GitHub** tab.
 3. Tick **"Include private repos"**. A GitHub sign-in window opens. Sign in and click **Authorize**. (Allow pop-ups if your browser blocks the window.)
-4. In the search box type `Chia-ai` and pick this repository, e.g. `Chia-ai/python-s01-programming-in-the-age-of-ai`.
+4. In the search box type `chia55` and pick this repository, e.g. `chia55/Session-1-Programming-in-the-Age-of-AI`.
 5. Click `notebooks/01-lesson-first-program.ipynb`.
 6. Immediately do **File → Save a copy in Drive**.
 
@@ -148,7 +148,7 @@ Discuss: Did it do what you asked? Would you have written it the same way? Is th
 | "You cannot currently connect to a GPU" | You don't need a GPU for this course. **Runtime → Change runtime type → CPU**. |
 | Output from earlier cells is gone after a break | Colab disconnects idle sessions. Run cells again from the top: **Runtime → Run all** or **Run before**. |
 | My uploaded file disappeared | Files in the 📁 panel are temporary. Keep originals on your computer or in Google Drive. |
-| I can't see private repos from GitHub | Make sure you ticked *Include private repos*, authorised Colab in GitHub, and that your facilitator added your GitHub account to the `Chia-ai` organisation. |
+| I can't see private repos from GitHub | Make sure you ticked *Include private repos*, authorised Colab in GitHub, and that your facilitator added your GitHub account to the `chia55` organisation. |
 | The Gemini button is missing | Your account or region may not have it yet. Use any AI chat in another tab, or skip. |
 
 Next: [01-optional-install-python-locally.md](01-optional-install-python-locally.md) (optional) or [02-what-is-a-program.md](02-what-is-a-program.md).

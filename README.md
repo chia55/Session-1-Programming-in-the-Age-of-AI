@@ -51,7 +51,7 @@ You do **not** need to install anything to take this course. Google Colab runs P
 ## What is in this repository
 
 ```
-python-s01-programming-in-the-age-of-ai/
+Session-1-Programming-in-the-Age-of-AI/
 ├── README.md                      ← you are here
 ├── CHEATSHEET.md                  ← one-page summary to keep
 ├── FACILITATOR_GUIDE.md           ← notes for the person teaching the session
@@ -78,7 +78,7 @@ Because this repository is **private**, Colab needs permission to read it:
 1. Go to <https://colab.research.google.com>.
 2. Choose **File → Open notebook → GitHub**.
 3. Tick **"Include private repos"** and sign in to GitHub when asked (you only do this once).
-4. Search for `Chia-ai`, choose this repository and click the notebook.
+4. Search for `chia55`, choose this repository and click the notebook.
 
 **No GitHub access?** Your facilitator can share the notebooks as files. In Colab use **File → Upload notebook** and pick the `.ipynb` file.
 
@@ -100,14 +100,14 @@ Always save your own copy: **File → Save a copy in Drive**. Otherwise your cha
 
 | # | Session | Repository |
 |---|---------|-----------|
-| **1** | **Programming in the Age of AI (FREE)** | `python-s01-programming-in-the-age-of-ai` |
-| 2 | Variables, Data Types and Decisions | `python-s02-variables-types-decisions` |
-| 3 | Loops and Lists | `python-s03-loops-and-lists` |
-| 4 | Dictionaries, Functions and JSON | `python-s04-dicts-functions-json` |
-| 5 | Data Analysis with pandas | `python-s05-pandas-data-analysis` |
-| 6 | Cleaning, Analysing and Querying Data with SQL | `python-s06-cleaning-and-sql` |
-| 7 | Visualisation and Descriptive Statistics | `python-s07-visualisation-and-statistics` |
-| 8 | Statistical Tests, AI in Python and Final Project | `python-s08-stats-ai-final-project` |
+| **1** | **Programming in the Age of AI (FREE)** | `Session-1-Programming-in-the-Age-of-AI` |
+| 2 | Variables, Data Types and Decisions | `Session-2-Variables-Data-Types-and-Decisions` |
+| 3 | Loops and Lists | `Session-3-Loops-and-Lists` |
+| 4 | Dictionaries, Functions and JSON | `Session-4-Dictionaries-Functions-and-JSON` |
+| 5 | Data Analysis with pandas | `Session-5-Data-Analysis-with-pandas` |
+| 6 | Cleaning, Analysing and Querying Data with SQL | `Session-6-Cleaning-Analysing-and-Querying-Data-with-SQL` |
+| 7 | Visualisation and Descriptive Statistics | `Session-7-Visualisation-and-Descriptive-Statistics` |
+| 8 | Statistical Tests, AI in Python and Final Project | `Session-8-Statistical-Tests-AI-in-Python-and-Final-Project` |
 
 ---
 

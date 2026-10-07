@@ -7,7 +7,7 @@
 ## Before the session
 
 - [ ] Test the room Wi-Fi with Colab. Colab needs a stable connection, but very little bandwidth.
-- [ ] Add learners' GitHub usernames to the `Chia-ai` organisation (read access) **or** prepare the notebooks to share as files / a Google Drive folder.
+- [ ] Add learners' GitHub usernames to the `chia55` organisation (read access) **or** prepare the notebooks to share as files / a Google Drive folder.
 - [ ] Have a backup: download the three `.ipynb` files to a USB stick.
 - [ ] Print the recipe worksheet (1 per pair) or share it on screen.
 - [ ] Check that Gemini in Colab works on your demo account. Have a backup AI chat open in another tab.
