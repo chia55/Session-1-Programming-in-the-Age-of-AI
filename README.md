@@ -1,0 +1,114 @@
+# Session 1: Programming in the Age of AI (FREE)
+
+> **Chia AI · Python for Beginners · Session 1 of 8**
+> No experience needed. All you need is a Google account and a web browser.
+
+This session is your starting point. You will learn what a program actually is, how to think like a programmer, why learning to code still matters now that AI can write code, and you will run your first Python program in Google Colab.
+
+---
+
+## What you will be able to do after this session
+
+By the end of Session 1 you will be able to:
+
+1. Explain in your own words what a program is and how a computer follows instructions.
+2. Break an everyday task into clear, ordered steps (an **algorithm**).
+3. Explain why a programmer still has to **understand, check and direct** code that an AI writes.
+4. Name real places where Python is used today: data, AI, automation and the web.
+5. Open Google Colab, create a notebook, run code cells and use Colab's built-in AI assistant responsibly.
+6. Write and run a Python program that prints a personal introduction.
+
+---
+
+## Before the session (10 minutes)
+
+| Step | What to do | Guide |
+|------|------------|-------|
+| 1 | Make sure you have a Google account (Gmail) | [guides/00-setup-google-colab.md](guides/00-setup-google-colab.md) |
+| 2 | Open <https://colab.research.google.com> and sign in | same guide |
+| 3 | *(Optional)* Install Python on your own computer | [guides/01-optional-install-python-locally.md](guides/01-optional-install-python-locally.md) |
+
+You do **not** need to install anything to take this course. Google Colab runs Python in the cloud, for free, inside your browser. It works on a laptop, a desktop, and (with some patience) a tablet.
+
+---
+
+## Session plan (about 3 hours)
+
+| Time | Topic | Material |
+|------|-------|----------|
+| 0:00 – 0:20 | Welcome, what a program is, how computers follow instructions | [guides/02-what-is-a-program.md](guides/02-what-is-a-program.md) |
+| 0:20 – 0:50 | Thinking like a programmer: algorithms, decomposition, pseudocode | [guides/03-thinking-like-a-programmer.md](guides/03-thinking-like-a-programmer.md) |
+| 0:50 – 1:10 | **Hands-on 1:** write step-by-step "recipes" for simple tasks | [worksheets/recipe-worksheet.md](worksheets/recipe-worksheet.md) |
+| 1:10 – 1:20 | Break | |
+| 1:20 – 1:40 | Why learn to code when AI can write code | [guides/04-why-code-in-the-age-of-ai.md](guides/04-why-code-in-the-age-of-ai.md) |
+| 1:40 – 1:55 | Where Python is used today | [guides/05-where-python-is-used.md](guides/05-where-python-is-used.md) |
+| 1:55 – 2:25 | Tour of Google Colab and its AI assistant, first program | [guides/00-setup-google-colab.md](guides/00-setup-google-colab.md), [notebooks/01-lesson-first-program.ipynb](notebooks/01-lesson-first-program.ipynb) |
+| 2:25 – 2:50 | **Hands-on 2:** print a personal introduction | [notebooks/02-exercises.ipynb](notebooks/02-exercises.ipynb) |
+| 2:50 – 3:00 | Recap, questions, preview of Session 2 | [CHEATSHEET.md](CHEATSHEET.md) |
+
+---
+
+## What is in this repository
+
+```
+python-s01-programming-in-the-age-of-ai/
+├── README.md                      ← you are here
+├── CHEATSHEET.md                  ← one-page summary to keep
+├── FACILITATOR_GUIDE.md           ← notes for the person teaching the session
+├── guides/
+│   ├── 00-setup-google-colab.md   ← accounts, Colab tour, AI assistant, opening these notebooks
+│   ├── 01-optional-install-python-locally.md
+│   ├── 02-what-is-a-program.md
+│   ├── 03-thinking-like-a-programmer.md
+│   ├── 04-why-code-in-the-age-of-ai.md
+│   ├── 05-where-python-is-used.md
+│   └── 06-your-first-program.md   ← print(), strings, comments, first errors
+├── notebooks/
+│   ├── 01-lesson-first-program.ipynb   ← follow along in class
+│   ├── 02-exercises.ipynb              ← hands-on practice
+│   └── 03-solutions.ipynb              ← try first, then compare
+└── worksheets/
+    └── recipe-worksheet.md         ← the "recipes" (algorithms) activity
+```
+
+### How to open a notebook in Google Colab
+
+Because this repository is **private**, Colab needs permission to read it:
+
+1. Go to <https://colab.research.google.com>.
+2. Choose **File → Open notebook → GitHub**.
+3. Tick **"Include private repos"** and sign in to GitHub when asked (you only do this once).
+4. Search for `Chia-ai`, choose this repository and click the notebook.
+
+**No GitHub access?** Your facilitator can share the notebooks as files. In Colab use **File → Upload notebook** and pick the `.ipynb` file.
+
+Always save your own copy: **File → Save a copy in Drive**. Otherwise your changes are lost when you close the tab.
+
+---
+
+## How to study with this material
+
+1. **Read the guide, then run the notebook.** The guides explain the *why*, the notebooks let you *do*.
+2. **Type the code yourself** rather than copy-pasting. Your fingers learn too.
+3. **Break things on purpose.** Remove a quote mark, misspell `print`, and read the error. Errors are information, not failure.
+4. **Try the exercises before opening the solutions.** Struggling for 10 minutes is where learning happens.
+5. **Use AI as a tutor, not a ghost-writer.** Ask it to *explain*, then check what it says.
+
+---
+
+## Course map
+
+| # | Session | Repository |
+|---|---------|-----------|
+| **1** | **Programming in the Age of AI (FREE)** | `python-s01-programming-in-the-age-of-ai` |
+| 2 | Variables, Data Types and Decisions | `python-s02-variables-types-decisions` |
+| 3 | Loops and Lists | `python-s03-loops-and-lists` |
+| 4 | Dictionaries, Functions and JSON | `python-s04-dicts-functions-json` |
+| 5 | Data Analysis with pandas | `python-s05-pandas-data-analysis` |
+| 6 | Cleaning, Analysing and Querying Data with SQL | `python-s06-cleaning-and-sql` |
+| 7 | Visualisation and Descriptive Statistics | `python-s07-visualisation-and-statistics` |
+| 8 | Statistical Tests, AI in Python and Final Project | `python-s08-stats-ai-final-project` |
+
+---
+
+© Chia AI. Course material for enrolled learners. Please do not redistribute without permission.
