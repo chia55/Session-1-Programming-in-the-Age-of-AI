@@ -32,21 +32,7 @@ You do **not** need to install anything to take this course. Google Colab runs P
 
 ---
 
-## Session plan (about 3 hours)
 
-| Time | Topic | Material |
-|------|-------|----------|
-| 0:00 – 0:30 | Welcome, what a program is, how computers follow instructions, levels of language from binary and assembly to Python | [guides/02-what-is-a-program.md](guides/02-what-is-a-program.md) |
-| 0:30 – 0:50 | Thinking like a programmer: algorithms, decomposition, pseudocode | [guides/03-thinking-like-a-programmer.md](guides/03-thinking-like-a-programmer.md) |
-| 0:50 – 1:10 | **Hands-on 1:** write step-by-step "recipes" for simple tasks | [worksheets/recipe-worksheet.md](worksheets/recipe-worksheet.md) |
-| 1:10 – 1:20 | Break | |
-| 1:20 – 1:40 | Why learn to code when AI can write code | [guides/04-why-code-in-the-age-of-ai.md](guides/04-why-code-in-the-age-of-ai.md) |
-| 1:40 – 1:55 | Where Python is used today | [guides/05-where-python-is-used.md](guides/05-where-python-is-used.md) |
-| 1:55 – 2:25 | Tour of Google Colab and its AI assistant, first program | [guides/00-setup-google-colab.md](guides/00-setup-google-colab.md), [notebooks/01-lesson-first-program.ipynb](notebooks/01-lesson-first-program.ipynb) |
-| 2:25 – 2:50 | **Hands-on 2:** print a personal introduction | [notebooks/02-exercises.ipynb](notebooks/02-exercises.ipynb) |
-| 2:50 – 3:00 | Recap, questions, preview of Session 2 | [CHEATSHEET.md](CHEATSHEET.md) |
-
----
 
 ## What is in this repository
 
