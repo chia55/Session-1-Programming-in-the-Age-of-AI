@@ -19,7 +19,8 @@
 |------|---------|-------|
 | 0:00 | Welcome & icebreaker | Ask: "Name one app you used today. What's its input and output?" Write answers on the board. |
 | 0:10 | What is a program | Do the **"make tea" robot** live: a volunteer gives instructions, and you follow them *literally* (pour water on the floor if they forget the cup!). Big laughs, memorable lesson. |
-| 0:20 | Thinking like a programmer | Walk through the matatu change example. Emphasise **edge cases** and **dry runs**. |
+| 0:20 | From binary to Python | Walk up the ladder with one example, KSh 210 + 65: binary (place values 128…1 on the board), machine code bytes, assembly, C, Python. Then the 5-minute "decode the binary message" pair activity (answer: HI; K E = 01001011 01000101). Land the point: every level is still instructions, and AI prompts are the newest level, which is why you must be able to read what comes out. |
+| 0:30 | Thinking like a programmer | Walk through the matatu change example. Emphasise **edge cases** and **dry runs**. |
 | 0:50 | Hands-on 1: recipes | Pairs choose tasks; insist on the swap-and-test step. Collect one great example to show. |
 | 1:10 | Break | |
 | 1:20 | Why code in the AI era | Show a short AI-generated program with a subtle bug (e.g. grade boundary `> 70` instead of `>= 70`) and ask who can spot it. Link back to *Understand · Check · Direct*. |

@@ -50,21 +50,142 @@ Notice three special words in bold. Almost every program in the world is built f
 | Choose between options | "if" | **selection / decisions** | Session 2 |
 | Repeat something | "for each", "until" | **iteration / loops** | Session 3 |
 
-## From human language to machine language
+## From binary to Python: the levels of programming language
 
-Computers only understand **machine code**: patterns of 1s and 0s. Writing that directly is painful, so people invented **programming languages** that look closer to English.
+Computers only understand **machine code**: patterns of 1s and 0s. Writing that directly is painful, so over 80 years people invented languages that sit at higher and higher **levels**, each one closer to human language than the one below it.
+
+| Level | Looks like | Who uses it today |
+|-------|-----------|-------------------|
+| **Machine code** (binary) | `10111000 11010010 …` | The CPU: the only thing it can actually run |
+| **Assembly** | `mov eax, 210` | Chip makers, device drivers, microcontrollers |
+| **Low-level / systems** (C, Rust) | `int total = 210 + 65;` | Operating systems, game engines, embedded devices |
+| **High-level** (Python, JavaScript) | `total = 210 + 65` | Data, web, AI, automation: this course |
+| **Natural language** (AI prompts) | "Add 210 and 65" | AI turns it into code, and you check it |
+
+To compare them, we'll write **the same tiny program at every level**: a duka bill of KSh 210 + KSh 65 = KSh 275.
+
+### Level 0: bits and binary
+
+A computer chip is billions of tiny switches (transistors). Each one is either **off (0)** or **on (1)**. One 0-or-1 is a **bit**; 8 bits make a **byte**. Numbers, letters, photos and sound are all stored as bits.
+
+In binary each place is worth double the one to its right:
+
+| Place value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-------------|-----|----|----|----|---|---|---|---|
+| `01000001`  | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+
+So `01000001` = 64 + 1 = **65**. Text is stored with a code table (ASCII, now Unicode) where 65 means the letter **A**, 66 is B, and so on.
+
+| Binary | Place values used | Decimal |
+|--------|-------------------|---------|
+| `00000101` | 4 + 1 | 5 |
+| `01000001` | 64 + 1 | 65 (the letter A) |
+| `01001011` | 64 + 8 + 2 + 1 | 75 (the letter K) |
+| `11010010` | 128 + 64 + 16 + 2 | 210 (our first price) |
+| `11111111` | 128 + 64 + … + 1 | 255, the biggest number one byte can hold |
+
+You can check all of this in Python (try it in Colab after the tour):
+
+```python
+print(bin(65))              # 0b1000001
+print(int("01000001", 2))   # 65
+print(ord("A"), chr(65))    # 65 A
+print(format(275, "b"))     # 100010011  (275 needs 9 bits)
+```
+
+### Level 1: machine code (1st generation, 1940s)
+
+These are the real bytes an Intel/AMD (x86-64) processor runs to add our two prices. They are written in **hexadecimal** (base 16), a shorter way to write bytes: two hex digits = 8 bits, `D2` = 210 and `41` = 65.
 
 ```
-You write (Python):        print("Habari!")
-         │
-         ▼   the Python interpreter translates it
-Computer runs:             10110000 01100001 …  (machine instructions)
-         │
-         ▼
-You see:                   Habari!
+B8 D2 00 00 00     10111000 11010010 00000000 00000000 00000000   put 210 in a register
+83 C0 41           10000011 11000000 01000001                     add 65 to it
+C3                 11000011                                       return the answer (275)
 ```
+
+The first programmers entered patterns like these with switches and punched cards. It is fast, but almost impossible to read, and it only works on **one family of chips**: this code will not run on the ARM chip in your phone.
+
+### Level 2: assembly language (2nd generation, 1950s)
+
+Assembly replaces each number pattern with a short word (a **mnemonic**). One line of assembly = one machine instruction. A program called an **assembler** turns it back into the bytes above.
+
+```nasm
+; the same program in x86-64 assembly
+add_prices:
+    mov eax, 210    ; put 210 in register eax (a tiny storage slot inside the CPU)
+    add eax, 65     ; add 65 to it
+    ret             ; hand back eax (275)
+```
+
+Notice there is no "print" here. Showing text on screen in assembly takes many more lines and a call to the operating system. That pain is why higher-level languages were invented. Assembly is still used for device drivers, microcontrollers and code that must be as fast as possible.
+
+### Level 3: systems languages like C (3rd generation, 1970s)
+
+C introduced named **variables** instead of registers, and it works on any chip, as long as you re-translate it for that chip. A **compiler** translates the whole file into machine code before it runs.
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int total = 210 + 65;
+    printf("Total: KSh %d\n", total);
+    return 0;
+}
+```
+
+```
+$ gcc add.c -o add
+$ ./add
+Total: KSh 275
+```
+
+C is "high-level" compared with assembly but "low-level" compared with Python: you must declare types (`int`), end lines with `;`, and manage memory yourself. Linux, Windows, the core of Android, and Python's own interpreter are written in C.
+
+### Level 4: high-level languages like Python
+
+```python
+total = 210 + 65
+print("Total: KSh", total)
+```
+
+```
+Total: KSh 275
+```
+
+Two lines. No `main`, no types to declare, no semicolons. You think about the **problem**, not the chip. Underneath, the Python interpreter (itself written in C) still turns this into machine code for the CPU.
 
 **Python** is a *high-level* language: it reads almost like English and hides the hard details. That's why it is the most popular first language, and why it's used everywhere from schools to NASA.
+
+### Level 5: natural language and AI
+
+The newest "level" is plain English (or Kiswahili): you describe what you want, and an AI assistant writes the code. But the AI produces code at one of the levels above, usually Python, and **you** are still responsible for reading and checking it. That's what this course prepares you to do.
+
+### The same task at four levels
+
+| Level | Lines | Readable? | Runs on |
+|-------|-------|-----------|---------|
+| Machine code | 3 instructions (9 bytes) | no | one chip family only |
+| Assembly | 3 + a label | barely | one chip family only |
+| C | 7 | with practice | any chip, after re-compiling |
+| Python | **2** | **yes** | anywhere Python is installed |
+
+Lower levels give more control and speed, but take more work and leave more room for mistakes. Higher levels need less code and are easier to read and share. For data and AI work, Python's readability wins, and the heavy maths inside libraries like pandas and NumPy is already written in fast C.
+
+### Try it: decode the binary message
+
+Use the place values 128 64 32 16 8 4 2 1. Each byte is one capital letter (A = 65, B = 66 … Z = 90).
+
+1. Decode `01001000 01001001`.
+2. Write the letters **K E** in binary.
+
+<details>
+<summary>Answers</summary>
+
+1. `01001000` = 64 + 8 = 72 = **H**; `01001001` = 64 + 8 + 1 = 73 = **I**. The message is **HI**.
+2. K = 75 = `01001011`, E = 69 = `01000101`.
+
+Check in Python: `chr(int("01001000", 2))` gives `'H'`.
+</details>
 
 ### Interpreter vs. compiler (just the idea)
 
@@ -79,6 +200,10 @@ You don't need to remember this. Just know that when you press ▶ in Colab, the
 |------|---------|
 | **Program / code** | Instructions written for a computer |
 | **Programming language** | A language with strict rules for writing those instructions (Python, JavaScript, SQL…) |
+| **Bit / byte** | One 0-or-1 / a group of 8 bits |
+| **Machine code** | The binary instructions a CPU actually runs |
+| **Assembly** | Machine instructions written as short words (`mov`, `add`); turned into machine code by an **assembler** |
+| **High-level language** | A language close to human language (Python); turned into machine code by a **compiler** or **interpreter** |
 | **Syntax** | The grammar rules of a language. Break them and you get a *syntax error* |
 | **Run / execute** | Make the computer carry out the instructions |
 | **Input** | Data that goes into a program (typed text, a file, a sensor reading) |

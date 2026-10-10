@@ -36,8 +36,8 @@ You do **not** need to install anything to take this course. Google Colab runs P
 
 | Time | Topic | Material |
 |------|-------|----------|
-| 0:00 – 0:20 | Welcome, what a program is, how computers follow instructions | [guides/02-what-is-a-program.md](guides/02-what-is-a-program.md) |
-| 0:20 – 0:50 | Thinking like a programmer: algorithms, decomposition, pseudocode | [guides/03-thinking-like-a-programmer.md](guides/03-thinking-like-a-programmer.md) |
+| 0:00 – 0:30 | Welcome, what a program is, how computers follow instructions, levels of language from binary and assembly to Python | [guides/02-what-is-a-program.md](guides/02-what-is-a-program.md) |
+| 0:30 – 0:50 | Thinking like a programmer: algorithms, decomposition, pseudocode | [guides/03-thinking-like-a-programmer.md](guides/03-thinking-like-a-programmer.md) |
 | 0:50 – 1:10 | **Hands-on 1:** write step-by-step "recipes" for simple tasks | [worksheets/recipe-worksheet.md](worksheets/recipe-worksheet.md) |
 | 1:10 – 1:20 | Break | |
 | 1:20 – 1:40 | Why learn to code when AI can write code | [guides/04-why-code-in-the-age-of-ai.md](guides/04-why-code-in-the-age-of-ai.md) |
