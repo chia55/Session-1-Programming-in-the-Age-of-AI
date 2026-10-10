@@ -1,4 +1,4 @@
-# Session 1: Programming in the Age of AI (FREE)
+# Session 1: Programming in the Age of AI
 
 > **Chia AI · Python for Beginners · Session 1 of 8**
 > No experience needed. All you need is a Google account and a web browser.
@@ -54,7 +54,6 @@ You do **not** need to install anything to take this course. Google Colab runs P
 Session-1-Programming-in-the-Age-of-AI/
 ├── README.md                      ← you are here
 ├── CHEATSHEET.md                  ← one-page summary to keep
-├── FACILITATOR_GUIDE.md           ← notes for the person teaching the session
 ├── guides/
 │   ├── 00-setup-google-colab.md   ← accounts, Colab tour, AI assistant, opening these notebooks
 │   ├── 01-optional-install-python-locally.md
