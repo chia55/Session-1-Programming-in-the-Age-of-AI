@@ -54,6 +54,18 @@ IF mark >= 70 THEN
 ELSE IF ...
 ```
 
+## Task E · Draw one recipe as a flowchart
+
+Draw the same recipe as a flowchart on paper, using the five shapes from [Guide 03](../guides/03-thinking-like-a-programmer.md#3-flowcharts):
+
+- **Oval** for Start and End
+- **Parallelogram** for input and output (INPUT mark, OUTPUT "A")
+- **Rectangle** for an action or calculation
+- **Diamond** for each yes/no question, with a **Yes** arrow and a **No** arrow
+- **Arrows** to show the order
+
+Check: is there exactly one Start and one End? Does every path from Start reach End? Does each diamond have both exits labelled?
+
 ## Reflection (write 2–3 sentences)
 
 - What was the hardest part of being precise?

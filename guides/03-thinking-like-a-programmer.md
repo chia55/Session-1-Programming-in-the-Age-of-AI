@@ -52,36 +52,51 @@ END IF
 
 ### 3. Flowcharts
 
-```
-        ┌─────────┐
-        │  START  │
-        └────┬────┘
-             ▼
-     ┌───────────────┐
-     │ Get price and │
-     │    balance    │
-     └───────┬───────┘
-             ▼
-      ◇ balance ≥ price? ◇
-       │yes          │no
-       ▼             ▼
- ┌──────────┐  ┌─────────────────────┐
- │ "You can │  │ "You need KSh X more"│
- │  buy it" │  └──────────┬──────────┘
- └────┬─────┘             │
-      └────────┬──────────┘
-               ▼
-          ┌─────────┐
-          │   END   │
-          └─────────┘
+A **flowchart** is a picture of an algorithm. Each kind of step has its own shape, and arrows show the order. Flowcharts are great for spotting a missing "otherwise" before you write any code.
+
+| Shape | Name | Meaning | Example |
+|-------|------|---------|---------|
+| Oval (rounded ends) | **Start / End** | Where the algorithm begins and finishes | Start |
+| Parallelogram ▱ | **Input / Output** | Data comes in, or a result goes out | Input price |
+| Rectangle ▭ | **Process** | An action or calculation | change = paid − fare |
+| Diamond ◇ | **Decision** | A yes/no question with exactly two exits | balance ≥ price? |
+| Arrow → | **Flow line** | The order of the steps | |
+
+**Rules:** one Start and one End · read top to bottom, left to right · every diamond has a **Yes** and a **No** exit · every path must reach End.
+
+Here is the "can the customer afford it?" algorithm as a flowchart (GitHub draws it for you):
+
+```mermaid
+flowchart TD
+    A(["Start"]) --> B[/"Input price and balance"/]
+    B --> C{"balance ≥ price?"}
+    C -- Yes --> D[/"Output: You can buy it"/]
+    C -- No --> E[/"Output: You need KSh price − balance more"/]
+    D --> F(["End"])
+    E --> F
 ```
 
-| Shape | Meaning |
-|-------|---------|
-| Oval | Start / End |
-| Rectangle | An action or calculation |
-| Diamond ◇ | A yes/no decision |
-| Arrow | The order of steps |
+<details>
+<summary>Can't see the drawing? (for example in Colab or a PDF) Here is a text version.</summary>
+
+```
+              ( START )
+                  │
+                  ▼
+      /  Input price and balance  /
+                  │
+                  ▼
+          ◇ balance ≥ price? ◇
+           │ Yes          │ No
+           ▼              ▼
+ / Output: "You can  /   / Output: "You need KSh  /
+ /   buy it"         /   /  price − balance more" /
+           │              │
+           └──────┬───────┘
+                  ▼
+               ( END )
+```
+</details>
 
 And here is the same algorithm in Python. Don't worry about understanding every symbol yet. You'll write this yourself in Session 2. Notice how closely it follows the pseudocode:
 
@@ -120,6 +135,24 @@ else:
 | 80 | Exact amount, thank you! |
 | 50 | Not enough. You need KSh 30 more |
 | 1000 | Your change is KSh 920 |
+
+**The same algorithm as a flowchart.** It has two decisions, so there are three possible outputs, and every path ends at End:
+
+```mermaid
+flowchart TD
+    S(["Start"]) --> I[/"Input paid"/]
+    I --> F["fare = 80"]
+    F --> D1{"paid #lt; fare?"}
+    D1 -- Yes --> O1[/"Output: Not enough, need KSh fare − paid more"/]
+    D1 -- No --> D2{"paid = fare?"}
+    D2 -- Yes --> O2[/"Output: Exact amount, thank you!"/]
+    D2 -- No --> O3[/"Output: Your change is KSh paid − fare"/]
+    O1 --> E(["End"])
+    O2 --> E
+    O3 --> E
+```
+
+Trace each test case through the flowchart with your finger. Paid 50: *paid #lt; fare?* **Yes**, so "need KSh 30 more". Paid 80: **No**, then *paid = fare?* **Yes**, so "exact amount". Paid 100: **No**, **No**, so change is KSh 20.
 
 Testing your algorithm by hand before coding catches most mistakes early. Professional programmers call these **test cases**.
 
